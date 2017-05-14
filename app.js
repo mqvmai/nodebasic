@@ -50,25 +50,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.get('/', function(req, res){
-  res.render('index', {
-    title: 'Home'
-  });
-});
-
-app.get('/about', function(req, res){
-  res.render('about', {
-    title: 'About'
-  });
-});
-
-app.get('/contact', function(req, res){
-  console.log('we here');
-  res.render('contact', {
-    title: 'Contact'
-  });
-});
-
 app.listen(3000, function () {
   console.log('Listening on port 3000');
 })

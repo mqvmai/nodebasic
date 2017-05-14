@@ -1,0 +1,31 @@
+.title-bar {
+  display: flex;
+  button {
+    flex: 2;
+  }
+  .title-bar-logo-wrap, .title-bar-icons {
+    flex: 6;
+  }
+  .title-bar-icons {
+    display: flex;
+    > a {
+      flex: 1;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      &.home {
+        color: hotpink;
+      }
+      &.about {
+        color: yellow;
+      }
+      &.contact {
+        color: lightblue;
+      }
+    }
+  }
+  .fa-bars {
+    font-size: 26px;
+    color: white;
+  }
+}
