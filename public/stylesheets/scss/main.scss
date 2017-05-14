@@ -1,7 +1,13 @@
 @import "../../../node_modules/font-awesome/scss/font-awesome";
 @import 'header';
 @import 'nav';
+@import 'footer';
 $fa-font-path:"../fonts";
+
+@font-face {
+  font-family: cursive;
+  src: url(../fonts/deftone-stylus.ttf);
+}
 
 body {
   margin: 0;

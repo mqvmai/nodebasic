@@ -2330,26 +2330,30 @@
 
 .title-bar {
   display: flex; }
-  .title-bar button {
-    flex: 2; }
   .title-bar .title-bar-logo-wrap, .title-bar .title-bar-icons {
-    flex: 6; }
-  .title-bar .title-bar-icons {
-    display: flex; }
-    .title-bar .title-bar-icons > a {
-      flex: 1;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: bold; }
-      .title-bar .title-bar-icons > a.home {
-        color: hotpink; }
-      .title-bar .title-bar-icons > a.about {
-        color: yellow; }
-      .title-bar .title-bar-icons > a.contact {
-        color: lightblue; }
+    display: flex;
+    flex: 1; }
+  .title-bar .title-bar-icons > a {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .title-bar .title-bar-icons > a.home {
+      color: hotpink; }
+    .title-bar .title-bar-icons > a.about {
+      color: yellow; }
+    .title-bar .title-bar-icons > a.contact {
+      color: lightblue; }
+  .title-bar .title-bar-logo-wrap .header-title {
+    flex: 3;
+    font-family: cursive;
+    text-align: center;
+    font-weight: bold; }
+  .title-bar .title-bar-logo-wrap .hamburger {
+    flex: 1;
+    color: gray; }
   .title-bar .fa-bars {
-    font-size: 26px;
-    color: white; }
+    font-size: 26px; }
 
 .off-canvas ul.vertical.menu {
   margin-top: 50px; }
@@ -2362,6 +2366,33 @@
       border-top: none; }
     .off-canvas ul.vertical.menu > li:first-of-type {
       border-bottom: none; }
+
+@media (max-width: 414px) {
+  .off-canvas.is-open {
+    width: 100%; } }
+
+@media (min-width: 415px) {
+  .off-canvas-wrapper i {
+    margin-left: 10px; } }
+
+@media (max-width: 414px) {
+  .off-canvas-wrapper .title-bar-icons a > span {
+    display: none; } }
+
+.footer {
+  background: black;
+  height: 50px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: cursive;
+  font-weight: bold; }
+
+@font-face {
+  font-family: cursive;
+  src: url(../fonts/deftone-stylus.ttf); }
 
 body {
   margin: 0; }

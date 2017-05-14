@@ -2,12 +2,13 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel='stylesheet'
-      href='/stylesheets/main.css' />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css"
       integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY="
       crossorigin="anonymous" />
+    <link rel='stylesheet'
+      href='/stylesheets/main.css' />
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -16,16 +17,28 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"
       integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs="
       crossorigin="anonymous"></script>
+      <script
+        src="/javascripts/site.js"
+        ></script>
   </head>
   <body>
     <div class="off-canvas-wrapper">
       <div class="header">
         <div class="title-bar">
-          <div class="title-bar-logo-wrap"><a data-open="offCanvasLeft"><i class="fa fa-bars"></i></a></div>
+          <div class="title-bar-logo-wrap">
+            <a class="hamburger" data-open="offCanvasLeft"><i class="fa fa-bars"></i></a>
+            <div class="header-title">Michael Mai</div>
+          </div>
           <div class="title-bar-icons">
-            <a class="home" href="/">Home</a>
-            <a class="about" href="/about">About</a>
-            <a class="contact" href="/contact">Contact</a>
+            <a class="home" href="/">
+              <span>Home</span><i class="fa fa-home" aria-hidden="true"></i>
+            </a>
+            <a class="about" href="/about">
+              <span>About</span><i class="fa fa-question-circle-o" aria-hidden="true"></i>
+            </a>
+            <a class="contact" href="/contact">
+              <span>Contact</span><i class="fa fa-phone" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -34,17 +47,23 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <ul class="vertical menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
         </ul>
       </div>
       <div class="off-canvas-content" data-off-canvas-content>
         <section class="wrapper">{{{body}}}</section>
       </div>
+      <div class="footer">
+        <div>Michael Mai</div>
+      </div>
     </div>
   </body>
-  <script>
-    $(document).foundation();
-  </script>
 </html>
