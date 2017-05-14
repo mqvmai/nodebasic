@@ -14,7 +14,6 @@ router.get('/about', function(req, res){
 });
 
 router.get('/contact', function(req, res){
-  console.log('we here');
   res.render('contact', {
     title: 'Contact'
   });

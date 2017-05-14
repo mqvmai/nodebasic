@@ -2351,5 +2351,23 @@
     font-size: 26px;
     color: white; }
 
+.off-canvas ul.vertical.menu {
+  margin-top: 50px; }
+  .off-canvas ul.vertical.menu > li {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white; }
+    .off-canvas ul.vertical.menu > li > a {
+      color: black; }
+    .off-canvas ul.vertical.menu > li:last-of-type {
+      border-top: none; }
+    .off-canvas ul.vertical.menu > li:first-of-type {
+      border-bottom: none; }
+
 body {
   margin: 0; }
+
+a {
+  color: white; }
+
+.wrapper {
+  margin: 20px; }

@@ -1,7 +1,16 @@
 @import "../../../node_modules/font-awesome/scss/font-awesome";
-$fa-font-path:"../fonts";
 @import 'header';
+@import 'nav';
+$fa-font-path:"../fonts";
 
 body {
   margin: 0;
+}
+
+a {
+  color: white;
+}
+
+.wrapper {
+  margin: 20px;
 }

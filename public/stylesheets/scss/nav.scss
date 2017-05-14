@@ -1,0 +1,18 @@
+.off-canvas {
+  ul.vertical.menu {
+    margin-top: 50px;
+    > li {
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      > a {
+        color: black;
+      }
+      &:last-of-type {
+        border-top: none;
+      }
+      &:first-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+}
