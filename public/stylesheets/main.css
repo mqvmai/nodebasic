@@ -52,14 +52,18 @@
 
 .footer {
   background: black;
-  height: 50px;
   text-align: center;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: cursive;
-  font-weight: bold; }
+  font-weight: bold;
+  min-height: 3.125rem; }
+  .footer .weathers {
+    display: flex; }
+    .footer .weathers .weather {
+      flex: 1; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome

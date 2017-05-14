@@ -1,6 +1,5 @@
 .footer {
   background: black;
-  height: 50px;
   text-align: center;
   color: white;
   display: flex;
@@ -8,4 +7,11 @@
   justify-content: center;
   font-family: cursive;
   font-weight: bold;
+  min-height: rem-calc(50);
+  .weathers {
+    display: flex;
+    .weather {
+      flex: 1;
+    }
+  }
 }

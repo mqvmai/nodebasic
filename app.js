@@ -1,3 +1,11 @@
+// TODO: separate hbs files into partials
+
+// TODO: do something using fileserve
+
+// TODO: do something using handlers and rendering a view
+
+// TODO: get webpack
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -7,6 +15,7 @@ var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
 var index = require('./routes/index');
 var app = express();
+var weather = require('./handlers/weather')(app);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +34,13 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(function (req, res, next) {
+  console.log('app time:', Date.now());
+  next();
+});
+
+app.use(weather.scrape);
 
 app.use('/', index);
 
