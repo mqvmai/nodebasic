@@ -1,4 +1,66 @@
 @charset "UTF-8";
+.title-bar {
+  display: flex; }
+  .title-bar .title-bar-logo-wrap, .title-bar .title-bar-icons {
+    display: flex;
+    flex: 1; }
+  .title-bar .title-bar-icons > a {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .title-bar .title-bar-icons > a.home {
+      color: hotpink; }
+    .title-bar .title-bar-icons > a.about {
+      color: yellow; }
+    .title-bar .title-bar-icons > a.contact {
+      color: lightblue; }
+  .title-bar .title-bar-logo-wrap .header-title {
+    flex: 3;
+    font-family: cursive;
+    text-align: center;
+    font-weight: bold; }
+  .title-bar .title-bar-logo-wrap .hamburger {
+    flex: 1;
+    color: gray; }
+  .title-bar .fa-bars {
+    font-size: 26px; }
+
+.off-canvas ul.vertical.menu {
+  margin-top: 50px; }
+  .off-canvas ul.vertical.menu > li {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white; }
+    .off-canvas ul.vertical.menu > li > a {
+      color: black; }
+    .off-canvas ul.vertical.menu > li:last-of-type {
+      border-top: none; }
+    .off-canvas ul.vertical.menu > li:first-of-type {
+      border-bottom: none; }
+
+@media (max-width: 414px) {
+  .off-canvas.is-open {
+    width: 100%; } }
+
+@media screen and (min-width: 40em) {
+  .off-canvas-wrapper i {
+    margin-left: 10px; } }
+
+@media screen and (max-width: 39.9375em) {
+  .off-canvas-wrapper .title-bar-icons a > span {
+    display: none; } }
+
+.footer {
+  background: black;
+  height: 50px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: cursive;
+  font-weight: bold; }
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2327,68 +2389,6 @@
   margin: 0;
   overflow: visible;
   clip: auto; }
-
-.title-bar {
-  display: flex; }
-  .title-bar .title-bar-logo-wrap, .title-bar .title-bar-icons {
-    display: flex;
-    flex: 1; }
-  .title-bar .title-bar-icons > a {
-    flex: 1;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold; }
-    .title-bar .title-bar-icons > a.home {
-      color: hotpink; }
-    .title-bar .title-bar-icons > a.about {
-      color: yellow; }
-    .title-bar .title-bar-icons > a.contact {
-      color: lightblue; }
-  .title-bar .title-bar-logo-wrap .header-title {
-    flex: 3;
-    font-family: cursive;
-    text-align: center;
-    font-weight: bold; }
-  .title-bar .title-bar-logo-wrap .hamburger {
-    flex: 1;
-    color: gray; }
-  .title-bar .fa-bars {
-    font-size: 26px; }
-
-.off-canvas ul.vertical.menu {
-  margin-top: 50px; }
-  .off-canvas ul.vertical.menu > li {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white; }
-    .off-canvas ul.vertical.menu > li > a {
-      color: black; }
-    .off-canvas ul.vertical.menu > li:last-of-type {
-      border-top: none; }
-    .off-canvas ul.vertical.menu > li:first-of-type {
-      border-bottom: none; }
-
-@media (max-width: 414px) {
-  .off-canvas.is-open {
-    width: 100%; } }
-
-@media (min-width: 415px) {
-  .off-canvas-wrapper i {
-    margin-left: 10px; } }
-
-@media (max-width: 414px) {
-  .off-canvas-wrapper .title-bar-icons a > span {
-    display: none; } }
-
-.footer {
-  background: black;
-  height: 50px;
-  text-align: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: cursive;
-  font-weight: bold; }
 
 @font-face {
   font-family: cursive;

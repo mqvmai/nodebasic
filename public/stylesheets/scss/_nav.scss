@@ -23,12 +23,12 @@
 }
 
 .off-canvas-wrapper {
-  @media (min-width: 415px) {
+  @include breakpoint(medium up) {
     i {
       margin-left: 10px;
     }
   }
-  @media (max-width: 414px) {
+  @include breakpoint(small only) {
     .title-bar-icons {
       a {
         > span {
