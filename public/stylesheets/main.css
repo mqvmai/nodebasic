@@ -57,13 +57,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: cursive;
   font-weight: bold;
   min-height: 3.125rem; }
   .footer .weathers {
     display: flex; }
     .footer .weathers .weather {
       flex: 1; }
+    .footer .weathers .fa-arrow-left {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0.3125rem; }
+    .footer .weathers .fa-arrow-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0.3125rem; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome

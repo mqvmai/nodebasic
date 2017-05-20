@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
     "build-css": "node-sass --include-path public/stylesheets/scss public/stylesheets/scss/main.scss public/stylesheets/main.css"
   },
   "dependencies": {
@@ -13,7 +12,7 @@
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "foundation-sites": "^6.3.1",
-    "hbs": "~4.0.1",
+    "hbs": "^4.0.1",
     "morgan": "~1.8.1",
     "node-sass-middleware": "0.9.8",
     "request": "^2.81.0",

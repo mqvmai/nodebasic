@@ -1,0 +1,15 @@
+<div class="footer">
+  {{#if weather}}
+    <div class="weathers">
+      {{#each weather}}
+        {{#if description}}
+          <div class="weather">
+            <div class="day">{{day}}</div>
+            <div class="description">{{description}}</div>
+            <div class="temp">{{temp.lo}} / {{temp.hi}}</div>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  {{/if}}
+</div>

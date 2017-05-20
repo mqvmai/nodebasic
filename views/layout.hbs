@@ -3,79 +3,18 @@
   <head>
     <title>{{title}}</title>
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css"
-      integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY="
-      crossorigin="anonymous" />
-    <link rel='stylesheet'
-      href='/stylesheets/main.css' />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"
-      integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs="
-      crossorigin="anonymous"></script>
-      <script
-        src="/javascripts/site.js"
-        ></script>
+    {{> scripts}}
   </head>
   <body>
     <div class="off-canvas-wrapper">
-      <div class="header">
-        <div class="title-bar">
-          <div class="title-bar-logo-wrap">
-            <a class="hamburger" data-open="offCanvasLeft"><i class="fa fa-bars"></i></a>
-            <div class="header-title">Michael Mai</div>
-          </div>
-          <div class="title-bar-icons">
-            <a class="home" href="/">
-              <span>Home</span><i class="fa fa-home" aria-hidden="true"></i>
-            </a>
-            <a class="about" href="/about">
-              <span>About</span><i class="fa fa-question-circle-o" aria-hidden="true"></i>
-            </a>
-            <a class="contact" href="/contact">
-              <span>Contact</span><i class="fa fa-phone" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
-        <button class="close-button" aria-label="Close menu" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <ul class="vertical menu">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+      {{> header}}
+      {{> leftNav}}
       <div class="off-canvas-content" data-off-canvas-content>
-        <section class="wrapper">{{{body}}}</section>
+        <section class="wrapper">
+          {{{body}}}
+        </section>
       </div>
-      <div class="footer">
-        {{#if weather}}
-          <div class="weathers">
-            {{#each weather}}
-              {{#if description}}
-                <div class="weather">
-                  <div class="day">{{day}}</div>
-                  <div class="description">{{description}}</div>
-                  <div class="temp">{{temp.lo}} / {{temp.hi}}</div>
-                </div>
-              {{/if}}
-            {{/each}}
-          </div>
-        {{/if}}
-      </div>
+      {{> footer}}
     </div>
   </body>
 </html>

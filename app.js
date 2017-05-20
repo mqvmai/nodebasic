@@ -1,21 +1,30 @@
-// TODO: separate hbs files into partials
+// TODO: separate hbs files into partials  DONE!
 
-// TODO: do something using fileserve
+// TODO: do something using fileserve   DONE!
 
 // TODO: do something using handlers and rendering a view
 
 // TODO: get webpack
 
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var sassMiddleware = require('node-sass-middleware');
-var index = require('./routes/index');
-var app = express();
-var weather = require('./handlers/weather')(app);
+// TODO: https://coderwall.com/p/zpjrra/async-waterfall-in-nodejs
+
+var express         = require('express');
+var path            = require('path');
+var favicon         = require('serve-favicon');
+var logger          = require('morgan');
+var cookieParser    = require('cookie-parser');
+var bodyParser      = require('body-parser');
+var sassMiddleware  = require('node-sass-middleware');
+var index           = require('./routes/index');
+var weather         = require('./handlers/weather')(app);
+var hbs             = require('hbs');
+var fs              = require('fs');
+var app             = express();
+
+hbs.registerPartial('scripts', fs.readFileSync(__dirname + '/views/partials/_scripts.hbs', 'utf8'));
+hbs.registerPartial('header', fs.readFileSync(__dirname + '/views/partials/_header.hbs', 'utf8'));
+hbs.registerPartial('footer', fs.readFileSync(__dirname + '/views/partials/_footer.hbs', 'utf8'));
+hbs.registerPartial('leftNav', fs.readFileSync(__dirname + '/views/partials/_leftNav.hbs', 'utf8'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
